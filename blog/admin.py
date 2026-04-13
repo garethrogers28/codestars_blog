@@ -4,6 +4,8 @@ from django_summernote.admin import SummernoteModelAdmin
 
 @admin.register(Post)
 class PostAdmin(SummernoteModelAdmin):
+    """Admin configuration for blog posts with 
+    Summernote content editing."""
 
     list_display = ('title', 'slug', 'status', 'created_on')
     search_fields = ['title', 'content',]

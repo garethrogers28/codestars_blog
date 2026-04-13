@@ -5,6 +5,8 @@ from django_summernote.admin import SummernoteModelAdmin
 
 @admin.register(About)
 class AboutAdmin(SummernoteModelAdmin):
+    """Admin configuration for the About page with Summernote content editing."""
+
     summernote_fields = ('content',)
 
 # Note: admin.ModelAdmin is the standard way of registering
