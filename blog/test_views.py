@@ -17,7 +17,7 @@ class TestBlogViews(TestCase):
                          content="Blog content", status=1)
         self.post.save()
 
-    def test_render_post_detail_page_with_comment_form(self):
+    def test_render_post_detail_page_with_comment_form(self):  
         response = self.client.get(reverse(
             'post_detail', args=['blog-title']))
         self.assertEqual(response.status_code, 200)
